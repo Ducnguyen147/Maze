@@ -5,6 +5,7 @@ import mazeHero from '../public/img/maze_hero.png';
 import mazeExit from '../public/img/maze_exit.png';
 import mazeMonster from '../public/img/maze_monster.png';
 import HeroInfo from './Hero'
+import heroData from '../public/input/maze_hero.json';
 
 // Define our maze
 let maze = [];
@@ -31,6 +32,7 @@ function Game() {
             this.load.image('monster', mazeMonster);
         },
         create: function() {
+            this.gameTime = 0;
             let hero;
 
             //Maze set up
@@ -50,7 +52,7 @@ function Game() {
 
             const effectiveWidth = window.innerWidth * (1 - padding);
             const effectiveHeight = window.innerHeight * (1 - padding);
-            this.blockSize = Math.min(effectiveWidth / maze[0].length, effectiveHeight / maze.length);
+            this.blockSize = Math.min(effectiveWidth / maze[0].length, effectiveHeight / maze.length) * 1.2;
             const mazeWidth = this.blockSize * maze[0].length;
             const offsetX = (window.innerWidth - mazeWidth) / 2;
             const mazeHeight = this.blockSize * maze.length;
@@ -98,6 +100,12 @@ function Game() {
 
             // Add a property to track the last time the hero moved
             this.lastMoveTime = 0;
+            this.gameTimeText = this.add.text(10, 10, `Game Time (mins): ${this.gameTime}`, { fontSize: '16px', fill: '#ffffff' });
+            this.heroName = this.add.text(10, 50, `Name: ${heroData.parameters.HP}`, { fontSize: '16px', fill: '#ffffff' });
+            this.heroHP = this.add.text(10, 70, `HP: ${this.gameTime}`, { fontSize: '16px', fill: '#ffffff' });
+            this.heroAware = this.add.text(10, 90, `Aware: ${this.gameTime}`, { fontSize: '16px', fill: '#ffffff' });
+            this.heroStealth = this.add.text(10, 110, `Stealth: ${this.gameTime}`, { fontSize: '16px', fill: '#ffffff' });
+            this.heroVelocity = this.add.text(10, 130, `Velocity: ${this.gameTime}`, { fontSize: '16px', fill: '#ffffff' });
         },
         
         update(time) {
@@ -105,17 +113,21 @@ function Game() {
             console.log(this.currentX, this.currentY);
             if (time - this.lastMoveTime > 150) {
               if (this.cursors.left.isDown && maze[this.currentY][this.currentX - 1] !== 1) {
+                this.gameTime += 10;
                 this.hero.x -= this.blockSize;
                 this.currentX -= 1;
               } else if (this.cursors.right.isDown && maze[this.currentY][this.currentX + 1] !== 1) {
+                this.gameTime += 10;
                 this.hero.x += this.blockSize;
                 this.currentX += 1;
               }
           
               if (this.cursors.up.isDown && maze[this.currentY - 1][this.currentX] !== 1) {
+                this.gameTime += 10;
                 this.hero.y -= this.blockSize;
                 this.currentY -= 1;
               } else if (this.cursors.down.isDown && maze[this.currentY + 1][this.currentX] !== 1) {
+                this.gameTime += 10;
                 this.hero.y += this.blockSize;
                 this.currentY += 1;
               }
@@ -123,7 +135,13 @@ function Game() {
               // Update the last move time
               this.lastMoveTime = time;
             }
-          }
+            this.gameTimeText.setText(`Game Time (mins): ${this.gameTime}`);
+            this.heroName.setText(`Name: ${heroData.Name}`);
+            this.heroHP.setText(`HP: ${heroData.parameters.HP}`);
+            this.heroAware.setText(`Awareness: ${heroData.parameters.Awareness}`);
+            this.heroStealth.setText(`Stealth: ${heroData.parameters.Stealth}`);
+            this.heroVelocity.setText(`Velocity: ${heroData.parameters.Velocity}`);
+        }
       }
     };
 
@@ -132,9 +150,7 @@ function Game() {
 
   return (
     <div>
-        <HeroInfo />
         <div id="phaser-game" ></div>
-
     </div>
 );
 }
