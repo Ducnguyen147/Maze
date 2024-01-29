@@ -4,6 +4,7 @@ import mazeWall from '../public/img/maze_wall.png';
 import mazeHero from '../public/img/maze_hero.png';
 import mazeExit from '../public/img/maze_exit.png';
 import mazeMonster from '../public/img/maze_monster.png';
+import HeroInfo from './Hero'
 
 // Define our maze
 let maze = [];
@@ -49,8 +50,8 @@ function Game() {
 
             const effectiveWidth = window.innerWidth * (1 - padding);
             const effectiveHeight = window.innerHeight * (1 - padding);
-            this.blockSize = Math.min(effectiveWidth / maze[0].length, effectiveHeight / maze.length) * 1.2;
-            const offsetX = this.blockSize / 1.5;
+            this.blockSize = Math.min(effectiveWidth / maze[0].length, effectiveHeight / maze.length) * 1.1;
+            const offsetX = this.blockSize * 16;
             const offsetY = this.blockSize / 1.5;
             this.currentX = 1;
             this.currentY= 1;
@@ -127,7 +128,13 @@ function Game() {
     new Phaser.Game(config);
   }, []);
 
-  return <div id="phaser-game" style={{ width: '100%', height: '100%' }}></div>;
+  return (
+    <div>
+        <HeroInfo />
+        <div id="phaser-game" ></div>
+
+    </div>
+);
 }
 
 export default Game;
