@@ -1,0 +1,75 @@
+{
+    "Challange" : "Day1",
+    "Dungeon" : {
+        "Size" : {
+            "Width" : "30",
+            "Height" : "30"
+        },
+        "Start" : {
+            "X" : "0",
+            "Y" : "0"
+        },
+        "Goal" : {
+            "X" : "29",
+            "Y" : "29"
+        },
+        "Layout" : [
+            "00000000",
+            "01111110",
+            "01000010",
+            "01011010",
+            "00011000",
+            "01000110",
+            "01111110",
+            "00000000"
+        ],
+        "Treasures" : [
+            {
+                "Position" :  {
+                    "X" : "0",
+                    "Y" : "4"
+                },
+                "Hidden" : "1",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "2"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "4",
+                    "Y" : "0"
+                },
+                "Hidden" : "8",
+                "Benefit" : {
+                    "Type" : "Flash",
+                    "Amount" : "10"
+                }
+            }
+        ],
+        "Monsters" : [
+            {
+                "Position" :  {
+                    "X" : "0",
+                    "Y" : "5"
+                },
+                "Intercept" : "6",
+                "Benefit" : {
+                    "Type" : "Awareness",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "5",
+                    "Y" : "0"
+                },
+                "Intercept" : "8",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "1"
+                }
+            }
+        ]
+    }
+}
