@@ -1,0 +1,383 @@
+{
+    "Challange" : "Day1",
+    "Dungeon" : {
+        "Size" : {
+            "Width" : "30",
+            "Height" : "30"
+        },
+        "Start" : {
+            "X" : "0",
+            "Y" : "0"
+        },
+        "Goal" : {
+            "X" : "29",
+            "Y" : "29"
+        },
+        "Layout" : [
+            "000000010000000010000000000000",
+            "111011010101111010111111111110",
+            "000000010100000010100000000000",
+            "011111010101101110101101111111",
+            "000000000101000000100000001000",
+            "111011110101011111101101011010",
+            "000000000001010000000101000010",
+            "011101011101010101010000000000",
+            "010101010001000101010111111111",
+            "010101011011010001010100000000",
+            "010000001010011111010101110101",
+            "010111101010000000000100000100",
+            "000000100010110111111100101110",
+            "011011101010000000000110001000",
+            "000000001010111111010010101011",
+            "110101111010000000011010101000",
+            "010101000010101111001010101110",
+            "000001011110101010001000101000",
+            "111101010000100000101010101010",
+            "000001010110110111101010001010",
+            "011111010100010010001011111010",
+            "010000010110111000101010000000",
+            "010101010000001011111010101111",
+            "000101011111101000000010100000",
+            "010101000000101101010110111110",
+            "010101111110100001010100100000",
+            "010100000010001101010101101010",
+            "010101111010100101010100001010",
+            "010001000010101101010101111110",
+            "000101000000100001000100000000"
+        ],
+        "Treasures" : [
+            {
+                "Position" :  {
+                    "X" : "0",
+                    "Y" : "4"
+                },
+                "Hidden" : "1",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "2"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "2",
+                    "Y" : "8"
+                },
+                "Hidden" : "2",
+                "Benefit" : {
+                    "Type" : "Velocity",
+                    "Amount" : "-0.1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "0",
+                    "Y" : "16"
+                },
+                "Hidden" : "3",
+                "Benefit" : {
+                    "Type" : "Flash",
+                    "Amount" : "10"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "4",
+                    "Y" : "29"
+                },
+                "Hidden" : "4",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "2"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "14",
+                    "Y" : "27"
+                },
+                "Hidden" : "4",
+                "Benefit" : {
+                    "Type" : "Velocity",
+                    "Amount" : "0.1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "17",
+                    "Y" : "22"
+                },
+                "Hidden" : "5",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "2"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "18",
+                    "Y" : "27"
+                },
+                "Hidden" : "5",
+                "Benefit" : {
+                    "Type" : "Flash",
+                    "Amount" : "10"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "14",
+                    "Y" : "9"
+                },
+                "Hidden" : "5",
+                "Benefit" : {
+                    "Type" : "Velocity",
+                    "Amount" : "-0.1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "25",
+                    "Y" : "6"
+                },
+                "Hidden" : "6",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "2"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "8",
+                    "Y" : "8"
+                },
+                "Hidden" : "6",
+                "Benefit" : {
+                    "Type" : "Velocity",
+                    "Amount" : "-0.1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "15",
+                    "Y" : "0"
+                },
+                "Hidden" : "7",
+                "Benefit" : {
+                    "Type" : "Flash",
+                    "Amount" : "10"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "29",
+                    "Y" : "9"
+                },
+                "Hidden" : "7",
+                "Benefit" : {
+                    "Type" : "Velocity",
+                    "Amount" : "-0.1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "25",
+                    "Y" : "22"
+                },
+                "Hidden" : "8",
+                "Benefit" : {
+                    "Type" : "Velocity",
+                    "Amount" : "-0.1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "29",
+                    "Y" : "7"
+                },
+                "Hidden" : "8",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "2"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "6",
+                    "Y" : "29"
+                },
+                "Hidden" : "8",
+                "Benefit" : {
+                    "Type" : "Flash",
+                    "Amount" : "10"
+                }
+            }
+        ],
+        "Monsters" : [
+            {
+                "Position" :  {
+                    "X" : "3",
+                    "Y" : "2"
+                },
+                "Intercept" : "6",
+                "Benefit" : {
+                    "Type" : "Awareness",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "5",
+                    "Y" : "6"
+                },
+                "Intercept" : "7",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "1",
+                    "Y" : "12"
+                },
+                "Intercept" : "5",
+                "Benefit" : {
+                    "Type" : "Stealth",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "3",
+                    "Y" : "17"
+                },
+                "Intercept" : "3",
+                "Benefit" : {
+                    "Type" : "Stealth",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "4",
+                    "Y" : "22"
+                },
+                "Intercept" : "4",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "9",
+                    "Y" : "13"
+                },
+                "Intercept" : "8",
+                "Benefit" : {
+                    "Type" : "Awareness",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "10",
+                    "Y" : "3"
+                },
+                "Intercept" : "5",
+                "Benefit" : {
+                    "Type" : "Awareness",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "21",
+                    "Y" : "2"
+                },
+                "Intercept" : "4",
+                "Benefit" : {
+                    "Type" : "Stealth",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "17",
+                    "Y" : "6"
+                },
+                "Intercept" : "6",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "11",
+                    "Y" : "19"
+                },
+                "Intercept" : "3",
+                "Benefit" : {
+                    "Type" : "Stealth",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "16",
+                    "Y" : "24"
+                },
+                "Intercept" : "7",
+                "Benefit" : {
+                    "Type" : "Awareness",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "16",
+                    "Y" : "18"
+                },
+                "Intercept" : "6",
+                "Benefit" : {
+                    "Type" : "Awareness",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "19",
+                    "Y" : "13"
+                },
+                "Intercept" : "5",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "23",
+                    "Y" : "15"
+                },
+                "Intercept" : "4",
+                "Benefit" : {
+                    "Type" : "Stealth",
+                    "Amount" : "1"
+                }
+            },
+            {
+                "Position" :  {
+                    "X" : "25",
+                    "Y" : "22"
+                },
+                "Intercept" : "8",
+                "Benefit" : {
+                    "Type" : "HP",
+                    "Amount" : "1"
+                }
+            }
+        ]
+    }
+}
