@@ -51,7 +51,7 @@ function Game() {
             const effectiveWidth = window.innerWidth * (1 - padding);
             const effectiveHeight = window.innerHeight * (1 - padding);
             this.blockSize = Math.min(effectiveWidth / maze[0].length, effectiveHeight / maze.length) * 1.1;
-            const offsetX = this.blockSize * 16;
+            const offsetX = this.blockSize * (effectiveWidth / 85);
             const offsetY = this.blockSize / 1.5;
             this.currentX = 1;
             this.currentY= 1;
