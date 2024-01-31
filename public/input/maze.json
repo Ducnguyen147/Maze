@@ -64,7 +64,7 @@
                 },
                 "Hidden" : "2",
                 "Benefit" : {
-                    "Type" : "Velocity",
+                    "Type" : "Speed",
                     "Amount" : "-0.1"
                 }
             },
@@ -97,7 +97,7 @@
                 },
                 "Hidden" : "4",
                 "Benefit" : {
-                    "Type" : "Velocity",
+                    "Type" : "Speed",
                     "Amount" : "0.1"
                 }
             },
@@ -130,7 +130,7 @@
                 },
                 "Hidden" : "5",
                 "Benefit" : {
-                    "Type" : "Velocity",
+                    "Type" : "Speed",
                     "Amount" : "-0.1"
                 }
             },
@@ -152,7 +152,7 @@
                 },
                 "Hidden" : "6",
                 "Benefit" : {
-                    "Type" : "Velocity",
+                    "Type" : "Speed",
                     "Amount" : "-0.1"
                 }
             },
@@ -174,7 +174,7 @@
                 },
                 "Hidden" : "7",
                 "Benefit" : {
-                    "Type" : "Velocity",
+                    "Type" : "Speed",
                     "Amount" : "-0.1"
                 }
             },
@@ -185,7 +185,7 @@
                 },
                 "Hidden" : "8",
                 "Benefit" : {
-                    "Type" : "Velocity",
+                    "Type" : "Speed",
                     "Amount" : "-0.1"
                 }
             },
