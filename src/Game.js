@@ -252,6 +252,9 @@ function Game() {
         },
 
         update: function (time) {
+            if (this.currentX === maze[0].length - 2 && this.currentY === maze.length - 2) {
+                this.message = 'You have exited the maze!\nCongratulations';
+            }
           if (!this.game.registry.get("isAnimating")) {
             return;
           }
