@@ -1,0 +1,10 @@
+{
+    "Name": "Mighty2",
+    "parameters": {
+        "MaxHP" : "5",
+        "HP" : "3",
+        "Awareness" : "9",
+        "Stealth" : "2",
+        "Speed" : "10"
+    }
+}
